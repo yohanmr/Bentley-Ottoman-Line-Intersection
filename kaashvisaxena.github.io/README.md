@@ -1,4 +1,2 @@
 # shinjiniguha.github.io
-Shin!
-Happy Birthday!
-PS - This is a website I made for her birthday.
+I solemly swear that this website is not for a fuckboi, else I will be victim to Yohan's wrath.
