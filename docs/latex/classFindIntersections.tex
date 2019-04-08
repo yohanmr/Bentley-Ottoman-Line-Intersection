@@ -1,0 +1,384 @@
+\hypertarget{classFindIntersections}{}\doxysection{Find\+Intersections Class Reference}
+\label{classFindIntersections}\index{FindIntersections@{FindIntersections}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFindIntersections_a2e449ae00f7ef4e8d87c2b1ff5c7d73b}{Find\+Intersections}} (vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ \&segment\+Vector)
+\begin{DoxyCompactList}\small\item\em constructor to initialise event queue and status \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}{on\+Segment}} (\mbox{\hyperlink{structpoint}{point}} p, \mbox{\hyperlink{structpoint}{point}} \mbox{\hyperlink{structq}{q}}, \mbox{\hyperlink{structpoint}{point}} r)
+\item 
+int \mbox{\hyperlink{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}{orientation}} (\mbox{\hyperlink{structpoint}{point}} p, \mbox{\hyperlink{structpoint}{point}} \mbox{\hyperlink{structq}{q}}, \mbox{\hyperlink{structpoint}{point}} r)
+\item 
+bool \mbox{\hyperlink{classFindIntersections_ad6596d9229499c07e49791e9e5a1f04b}{do\+Intersect}} (\mbox{\hyperlink{structlineSegment}{line\+Segment}} l1, \mbox{\hyperlink{structlineSegment}{line\+Segment}} l2)
+\item 
+\mbox{\hyperlink{structpoint}{point}} \mbox{\hyperlink{classFindIntersections_a5d02ab60f49b153c5038e6bf14798e44}{intersection\+Of}} (\mbox{\hyperlink{structlineSegment}{line\+Segment}} l1, \mbox{\hyperlink{structlineSegment}{line\+Segment}} l2)
+\item 
+void \mbox{\hyperlink{classFindIntersections_acb230a83202e4601a4859d41528aae8b}{find\+New\+Event}} (\mbox{\hyperlink{structlineSegment}{line\+Segment}} sl, \mbox{\hyperlink{structlineSegment}{line\+Segment}} sr, struct \mbox{\hyperlink{structq}{q}} $\ast$p)
+\item 
+\mbox{\Hypertarget{classFindIntersections_ab19b05c5a5e3863f2a4caa76c992f3c4}\label{classFindIntersections_ab19b05c5a5e3863f2a4caa76c992f3c4}} 
+int {\bfseries contains} (vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ x, \mbox{\hyperlink{structlineSegment}{line\+Segment}} l)
+\item 
+\mbox{\Hypertarget{classFindIntersections_a80539439ff14b2c4e4ccc96b1abaf41d}\label{classFindIntersections_a80539439ff14b2c4e4ccc96b1abaf41d}} 
+vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ {\bfseries union\+Of} (vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ a, vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ b)
+\item 
+\mbox{\Hypertarget{classFindIntersections_a5ea1578d493c3fcc38d1ddf432f41fc3}\label{classFindIntersections_a5ea1578d493c3fcc38d1ddf432f41fc3}} 
+int {\bfseries empty} (vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ x)
+\item 
+void \mbox{\hyperlink{classFindIntersections_a046141f28333169bb5fe9070cc1d3bea}{handle\+Event\+Point}} (struct \mbox{\hyperlink{structq}{q}} $\ast$event\+Point)
+\begin{DoxyCompactList}\small\item\em handle each event point popped from the event queue \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFindIntersections_af69ee532a6b8ae26e603c70f0121540d}\label{classFindIntersections_af69ee532a6b8ae26e603c70f0121540d}} 
+void \mbox{\hyperlink{classFindIntersections_af69ee532a6b8ae26e603c70f0121540d}{run\+Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Run the algorithm to find the line intersections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}\label{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}} 
+\mbox{\hyperlink{classevent}{event}} \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{event\+Queue}}
+\begin{DoxyCompactList}\small\item\em initialise event\+Queue and status \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFindIntersections_afa45762f6be2b586183b93b82ef160f0}\label{classFindIntersections_afa45762f6be2b586183b93b82ef160f0}} 
+struct \mbox{\hyperlink{structq}{q}} $\ast$ {\bfseries event\+Queue\+Root} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{classFindIntersections_acb104280c194de31fd6dbc80839e11ac}\label{classFindIntersections_acb104280c194de31fd6dbc80839e11ac}} 
+\mbox{\hyperlink{classstatustree}{statustree}} {\bfseries status} = \mbox{\hyperlink{classstatustree}{statustree}}()
+\item 
+\mbox{\Hypertarget{classFindIntersections_ab9f2d3dc02f724facaf311518a5794c3}\label{classFindIntersections_ab9f2d3dc02f724facaf311518a5794c3}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ {\bfseries status\+Root} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Find\+Intersections.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFindIntersections_a2e449ae00f7ef4e8d87c2b1ff5c7d73b}\label{classFindIntersections_a2e449ae00f7ef4e8d87c2b1ff5c7d73b}} 
+\index{FindIntersections@{FindIntersections}!FindIntersections@{FindIntersections}}
+\index{FindIntersections@{FindIntersections}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{FindIntersections()}{FindIntersections()}}
+{\footnotesize\ttfamily Find\+Intersections\+::\+Find\+Intersections (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structlineSegment}{line\+Segment}} $>$ \&}]{segment\+Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor to initialise event queue and status 
+
+insert end points into the event queue.
+
+Definition at line 29 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                                                \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < segmentVector.size(); i++)}
+\DoxyCodeLine{31             \{   }
+\DoxyCodeLine{32                 \textcolor{keywordtype}{float} startx, starty, endx, endy;}
+\DoxyCodeLine{33                 \textcolor{keywordflow}{if}(segmentVector[i].startY >= segmentVector[i].endY)\{}
+\DoxyCodeLine{34                     startx = segmentVector[i].startX;}
+\DoxyCodeLine{35                     starty = segmentVector[i].startY;}
+\DoxyCodeLine{36                     endx = segmentVector[i].endX;}
+\DoxyCodeLine{37                     endy = segmentVector[i].endY;}
+\DoxyCodeLine{38                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{39                     startx = segmentVector[i].endX;}
+\DoxyCodeLine{40                     starty = segmentVector[i].endY;}
+\DoxyCodeLine{41                     endx = segmentVector[i].startX;}
+\DoxyCodeLine{42                     endy = segmentVector[i].startY;}
+\DoxyCodeLine{43                 \}}
+\DoxyCodeLine{44                 \textcolor{keywordflow}{if} (segmentVector[i].startY == segmentVector[i].endY ) \{}
+\DoxyCodeLine{45                     \textcolor{keywordflow}{if} (segmentVector[i].startX <= segmentVector[i].endX) \{}
+\DoxyCodeLine{46                         startx = segmentVector[i].startX;}
+\DoxyCodeLine{47                         starty = segmentVector[i].startY;}
+\DoxyCodeLine{48                         endx = segmentVector[i].endX;}
+\DoxyCodeLine{49                         endy = segmentVector[i].endY;}
+\DoxyCodeLine{50                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{51                         startx = segmentVector[i].endX;}
+\DoxyCodeLine{52                         starty = segmentVector[i].endY;}
+\DoxyCodeLine{53                         endx = segmentVector[i].startX;}
+\DoxyCodeLine{54                         endy = segmentVector[i].startY;}
+\DoxyCodeLine{55                     \}}
+\DoxyCodeLine{56                     }
+\DoxyCodeLine{57                 \}}
+\DoxyCodeLine{58                 }
+\DoxyCodeLine{59                 \textcolor{comment}{// printf("\%f \%f \%f \%f\(\backslash\)n", startx, starty, endx, endy);             }}
+\DoxyCodeLine{60                 }
+\DoxyCodeLine{62                 eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, startx, starty, startx, starty, endx, endy, 1);}
+\DoxyCodeLine{63                 eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, endx, endy, startx, starty, endx, endy, 2);}
+\DoxyCodeLine{64             \}}
+\DoxyCodeLine{65         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFindIntersections_ad6596d9229499c07e49791e9e5a1f04b}\label{classFindIntersections_ad6596d9229499c07e49791e9e5a1f04b}} 
+\index{FindIntersections@{FindIntersections}!doIntersect@{doIntersect}}
+\index{doIntersect@{doIntersect}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{doIntersect()}{doIntersect()}}
+{\footnotesize\ttfamily bool Find\+Intersections\+::do\+Intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{l1,  }\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The main function that returns true if line segment \textquotesingle{}p1q1\textquotesingle{} and \textquotesingle{}p2q2\textquotesingle{} intersect. Find the four orientations needed for general and special cases
+
+General case
+
+Special Cases p1, q1 and p2 are colinear and p2 lies on segment p1q1 ~\newline
+
+
+p1, q1 and q2 are colinear and q2 lies on segment p1q1
+
+p2, q2 and p1 are colinear and p1 lies on segment p2q2
+
+p2, q2 and q1 are colinear and q1 lies on segment p2q2
+
+Definition at line 98 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99         \{ }
+\DoxyCodeLine{100             \textcolor{keyword}{struct }\mbox{\hyperlink{structpoint}{point}} p1, q1, p2, q2;}
+\DoxyCodeLine{101             p1.x = l1.startX;}
+\DoxyCodeLine{102             p1.y = l1.startY;}
+\DoxyCodeLine{103             q1.x = l1.endX;}
+\DoxyCodeLine{104             q1.y = l1.endY;}
+\DoxyCodeLine{105             p2.x = l2.startX;}
+\DoxyCodeLine{106             p2.y = l2.startY;}
+\DoxyCodeLine{107             q2.x = l2.endX;}
+\DoxyCodeLine{108             q2.y = l2.endY;}
+\DoxyCodeLine{110             \textcolor{keywordtype}{int} o1 = \mbox{\hyperlink{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}{orientation}}(p1, q1, p2); }
+\DoxyCodeLine{111             \textcolor{keywordtype}{int} o2 = \mbox{\hyperlink{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}{orientation}}(p1, q1, q2); }
+\DoxyCodeLine{112             \textcolor{keywordtype}{int} o3 = \mbox{\hyperlink{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}{orientation}}(p2, q2, p1); }
+\DoxyCodeLine{113             \textcolor{keywordtype}{int} o4 = \mbox{\hyperlink{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}{orientation}}(p2, q2, q1); }
+\DoxyCodeLine{114         }
+\DoxyCodeLine{116             \textcolor{keywordflow}{if} (o1 != o2 \&\& o3 != o4) }
+\DoxyCodeLine{117                 \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{118         }
+\DoxyCodeLine{121             \textcolor{keywordflow}{if} (o1 == 0 \&\& \mbox{\hyperlink{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}{onSegment}}(p1, p2, q1)) \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{122         }
+\DoxyCodeLine{124             \textcolor{keywordflow}{if} (o2 == 0 \&\& \mbox{\hyperlink{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}{onSegment}}(p1, q2, q1)) \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{125         }
+\DoxyCodeLine{127             \textcolor{keywordflow}{if} (o3 == 0 \&\& \mbox{\hyperlink{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}{onSegment}}(p2, p1, q2)) \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{128         }
+\DoxyCodeLine{130             \textcolor{keywordflow}{if} (o4 == 0 \&\& \mbox{\hyperlink{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}{onSegment}}(p2, q1, q2)) \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{131         }
+\DoxyCodeLine{132             \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Doesn't fall in any of the above cases }}
+\DoxyCodeLine{133         \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFindIntersections_acb230a83202e4601a4859d41528aae8b}\label{classFindIntersections_acb230a83202e4601a4859d41528aae8b}} 
+\index{FindIntersections@{FindIntersections}!findNewEvent@{findNewEvent}}
+\index{findNewEvent@{findNewEvent}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{findNewEvent()}{findNewEvent()}}
+{\footnotesize\ttfamily void Find\+Intersections\+::find\+New\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{sl,  }\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{sr,  }\item[{struct \mbox{\hyperlink{structq}{q}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+find intersection point of sl and sr
+
+Definition at line 163 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                                                       \{}
+\DoxyCodeLine{165             \textcolor{keyword}{struct }\mbox{\hyperlink{structpoint}{point}} newEventPoint = \mbox{\hyperlink{classFindIntersections_a5d02ab60f49b153c5038e6bf14798e44}{intersectionOf}}(sl, sr);}
+\DoxyCodeLine{166             \textcolor{comment}{// printf("intersection point of \%f \%f \%f \%f AND \%f \%f \%f \%f: \%f \%f\(\backslash\)n", sl.startX, sl.startY, sl.endX, sl.endY, sr.startX, sr.startY, sr.endX, sr.endY, newEventPoint.x, newEventPoint.y);}}
+\DoxyCodeLine{167             \textcolor{keywordflow}{if} (newEventPoint.y != -\/1) \{}
+\DoxyCodeLine{168                 \textcolor{keywordflow}{if}(newEventPoint.y < p-\/>yc)\{}
+\DoxyCodeLine{169                     eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, newEventPoint.x, newEventPoint.y, sl.startX, sl.startY, sl.endX, sl.endY, 3);}
+\DoxyCodeLine{170                     eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, newEventPoint.x, newEventPoint.y, sr.startX, sr.startY, sr.endX, sr.endY, 3);}
+\DoxyCodeLine{171                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(newEventPoint.y == p-\/>yc \&\& newEventPoint.x > p-\/>xc)\{}
+\DoxyCodeLine{172                     eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, newEventPoint.x, newEventPoint.y, sl.startX, sl.startY, sl.endX, sl.endY, 3);}
+\DoxyCodeLine{173                     eventQueueRoot = \mbox{\hyperlink{classFindIntersections_a4b1182f3f68c616c8511db771ea46086}{eventQueue}}.\mbox{\hyperlink{classevent_ae74502693b5892d06e4107aa3239e9f6}{insert}}( eventQueueRoot, newEventPoint.x, newEventPoint.y, sr.startX, sr.startY, sr.endX, sr.endY, 3);}
+\DoxyCodeLine{174                 \}}
+\DoxyCodeLine{175             \}}
+\DoxyCodeLine{176             }
+\DoxyCodeLine{177             }
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179             }
+\DoxyCodeLine{180         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFindIntersections_a046141f28333169bb5fe9070cc1d3bea}\label{classFindIntersections_a046141f28333169bb5fe9070cc1d3bea}} 
+\index{FindIntersections@{FindIntersections}!handleEventPoint@{handleEventPoint}}
+\index{handleEventPoint@{handleEventPoint}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{handleEventPoint()}{handleEventPoint()}}
+{\footnotesize\ttfamily void Find\+Intersections\+::handle\+Event\+Point (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structq}{q}} $\ast$}]{event\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+handle each event point popped from the event queue 
+
+Union of Lp, Up and Cp
+
+delete elements of Lp union Cp from status
+
+insert segments in Up union Cp into status according to their position just below the sweep line
+
+check if Up union Cp is empty
+
+Definition at line 216 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                                                    \{}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{219             vector<lineSegment> all = unionOf(eventPoint-\/>L, unionOf(eventPoint-\/>U, eventPoint-\/>C));}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221             \textcolor{keywordflow}{if} (all.size() > 1) \{}
+\DoxyCodeLine{222                 \textcolor{comment}{// p is an intersection}}
+\DoxyCodeLine{223                 printf(\textcolor{stringliteral}{"Intersection: \%f \%f\(\backslash\)n"}, eventPoint-\/>xc, eventPoint-\/>yc);}
+\DoxyCodeLine{224             \}}
+\DoxyCodeLine{226             vector<lineSegment> temp1 = unionOf(eventPoint-\/>L, eventPoint-\/>C);}
+\DoxyCodeLine{227             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < temp1.size(); i++)}
+\DoxyCodeLine{228             \{}
+\DoxyCodeLine{229                 \textcolor{comment}{// printf("delete line: \%f \%f \%f \%f\(\backslash\)n",temp1[i].startX,temp1[i].startY, temp1[i].endX, temp1[i].endY);}}
+\DoxyCodeLine{230                 statusRoot = \mbox{\hyperlink{structstatus}{status}}.deleteNode(statusRoot, temp1[i], eventPoint-\/>yc);}
+\DoxyCodeLine{231             \}}
+\DoxyCodeLine{232             \textcolor{comment}{// printf("point: \%f \%f\(\backslash\)n", eventPoint-\/>xc, eventPoint-\/>yc);}}
+\DoxyCodeLine{233             \textcolor{comment}{// printf("after deleting:\(\backslash\)n");}}
+\DoxyCodeLine{234             \textcolor{comment}{// status.preOrder(statusRoot);}}
+\DoxyCodeLine{235             }
+\DoxyCodeLine{237             vector<lineSegment> temp2 = unionOf(eventPoint-\/>U, eventPoint-\/>C);}
+\DoxyCodeLine{238             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < temp2.size(); i++)}
+\DoxyCodeLine{239             \{}
+\DoxyCodeLine{240                 statusRoot = \mbox{\hyperlink{structstatus}{status}}.insert(statusRoot, temp2[i], (eventPoint-\/>yc -\/ 0.1));}
+\DoxyCodeLine{241             \}}
+\DoxyCodeLine{242             \textcolor{comment}{// printf("after reinserting:\(\backslash\)n");}}
+\DoxyCodeLine{243             \textcolor{comment}{// status.preOrder(statusRoot);}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{246             \textcolor{keywordflow}{if}(empty(temp2) == 1)\{}
+\DoxyCodeLine{247                 \textcolor{keyword}{struct }\mbox{\hyperlink{structlineSegment}{lineSegment}} sl, sr;}
+\DoxyCodeLine{248                 sl.startX = -\/1;}
+\DoxyCodeLine{249                 sr.startX = -\/1;}
+\DoxyCodeLine{250                 \textcolor{comment}{// status.preOrder(statusRoot);}}
+\DoxyCodeLine{251                 \mbox{\hyperlink{structstatus}{status}}.getNeighbors(statusRoot, eventPoint-\/>xc, (eventPoint-\/>yc)-\/0.1, \&sl, \&sr);}
+\DoxyCodeLine{252                 \textcolor{comment}{// if(sl.startX != -\/1)\{}}
+\DoxyCodeLine{253                 \textcolor{comment}{//     if (sr.startX != -\/1) \{}}
+\DoxyCodeLine{254                 \textcolor{comment}{//         findNewEvent(sl, sr, eventPoint);}}
+\DoxyCodeLine{255                 \textcolor{comment}{//     \}}}
+\DoxyCodeLine{256                 \textcolor{comment}{// \}}}
+\DoxyCodeLine{257             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{258                 \textcolor{keyword}{struct }\mbox{\hyperlink{structlineSegment}{lineSegment}} sll, srr;}
+\DoxyCodeLine{259                 \textcolor{keywordtype}{float} max = -\/1.0, min = 1001.0; }
+\DoxyCodeLine{260                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < temp2.size(); i++)}
+\DoxyCodeLine{261                 \{}
+\DoxyCodeLine{262                     \textcolor{keywordtype}{float} x = \mbox{\hyperlink{structstatus}{status}}.findx(temp2[i], eventPoint-\/>yc);}
+\DoxyCodeLine{263                     \textcolor{keywordtype}{float} minX = (temp2[i].startX < temp2[i].endX) ? temp2[i].startX : temp2[i].endX;}
+\DoxyCodeLine{264                     \textcolor{keywordtype}{float} maxX = (temp2[i].startX > temp2[i].endX) ? temp2[i].startX : temp2[i].endX;}
+\DoxyCodeLine{265                     \textcolor{keywordflow}{if} (x < min \&\& x <= maxX \&\& x >= minX) \{}
+\DoxyCodeLine{266                         min = x;}
+\DoxyCodeLine{267                         sll = temp2[i];}
+\DoxyCodeLine{268                     \}}
+\DoxyCodeLine{269                     \textcolor{keywordflow}{if}(x > max  \&\& x <= maxX \&\& x >= minX)\{}
+\DoxyCodeLine{270                         }
+\DoxyCodeLine{271                         max = x;}
+\DoxyCodeLine{272                         srr = temp2[i];}
+\DoxyCodeLine{273                     \}}
+\DoxyCodeLine{274                     }
+\DoxyCodeLine{275                 \}}
+\DoxyCodeLine{276   }
+\DoxyCodeLine{277                 \textcolor{keyword}{struct }\mbox{\hyperlink{structlineSegment}{lineSegment}} sl, sr;}
+\DoxyCodeLine{278                 sl.startX = -\/1;}
+\DoxyCodeLine{279                 sr.startX = -\/1;}
+\DoxyCodeLine{280                 \mbox{\hyperlink{structstatus}{status}}.getLeftNeighbor(statusRoot, sll, eventPoint-\/>yc, \&sl);}
+\DoxyCodeLine{281                 \mbox{\hyperlink{structstatus}{status}}.getRightNeighbor(statusRoot , srr, eventPoint-\/>yc, \&sr);}
+\DoxyCodeLine{282                 }
+\DoxyCodeLine{283                 \textcolor{keywordflow}{if}(sl.startX != -\/1 \&\& min != 1001)\{}
+\DoxyCodeLine{284                     \mbox{\hyperlink{classFindIntersections_acb230a83202e4601a4859d41528aae8b}{findNewEvent}}(sl, sll, eventPoint);}
+\DoxyCodeLine{285                 \}}
+\DoxyCodeLine{286                 \textcolor{keywordflow}{if}(sr.startX != -\/1 \&\& max != -\/1)\{}
+\DoxyCodeLine{287                     \mbox{\hyperlink{classFindIntersections_acb230a83202e4601a4859d41528aae8b}{findNewEvent}}(srr, sr, eventPoint);}
+\DoxyCodeLine{288                 \}}
+\DoxyCodeLine{289             \}}
+\DoxyCodeLine{290             }
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFindIntersections_a5d02ab60f49b153c5038e6bf14798e44}\label{classFindIntersections_a5d02ab60f49b153c5038e6bf14798e44}} 
+\index{FindIntersections@{FindIntersections}!intersectionOf@{intersectionOf}}
+\index{intersectionOf@{intersectionOf}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{intersectionOf()}{intersectionOf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpoint}{point}} Find\+Intersections\+::intersection\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{l1,  }\item[{\mbox{\hyperlink{structlineSegment}{line\+Segment}}}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The line segments do not intersect.
+
+Line l1 represented as a1x + b1y = c1
+
+Line l2 represented as a2x + b2y = c2
+
+Definition at line 135 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                                             \{}
+\DoxyCodeLine{136             }
+\DoxyCodeLine{137             \mbox{\hyperlink{structpoint}{point}} intersection;}
+\DoxyCodeLine{138             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classFindIntersections_ad6596d9229499c07e49791e9e5a1f04b}{doIntersect}}(l1, l2) == 0) }
+\DoxyCodeLine{139             \{ }
+\DoxyCodeLine{141                 intersection.x = -\/1;}
+\DoxyCodeLine{142                 intersection.y = -\/1;}
+\DoxyCodeLine{143             \} }
+\DoxyCodeLine{144             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{145             \{   }
+\DoxyCodeLine{147                 \textcolor{keywordtype}{double} a1 = l1.endY -\/ l1.startY; }
+\DoxyCodeLine{148                 \textcolor{keywordtype}{double} b1 = l1.startX -\/ l1.endX; }
+\DoxyCodeLine{149                 \textcolor{keywordtype}{double} c1 = a1*(l1.startX) + b1*(l1.startY); }
+\DoxyCodeLine{150             }
+\DoxyCodeLine{152                 \textcolor{keywordtype}{double} a2 = l2.endY -\/ l2.startY; }
+\DoxyCodeLine{153                 \textcolor{keywordtype}{double} b2 = l2.startX -\/ l2.endX; }
+\DoxyCodeLine{154                 \textcolor{keywordtype}{double} c2 = a2*(l2.startX) + b2*(l2.startY); }
+\DoxyCodeLine{155             }
+\DoxyCodeLine{156                 \textcolor{keywordtype}{double} determinant = a1*b2 -\/ a2*b1; }
+\DoxyCodeLine{157                 intersection.x = (b2*c1 -\/ b1*c2)/determinant; }
+\DoxyCodeLine{158                 intersection.y = (a1*c2 -\/ a2*c1)/determinant;}
+\DoxyCodeLine{159             \}}
+\DoxyCodeLine{160             \textcolor{keywordflow}{return} intersection;}
+\DoxyCodeLine{161         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}\label{classFindIntersections_a17dcfc90ac24d3d3009af9e860d8c11e}} 
+\index{FindIntersections@{FindIntersections}!onSegment@{onSegment}}
+\index{onSegment@{onSegment}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{onSegment()}{onSegment()}}
+{\footnotesize\ttfamily bool Find\+Intersections\+::on\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpoint}{point}}}]{p,  }\item[{\mbox{\hyperlink{structpoint}{point}}}]{q,  }\item[{\mbox{\hyperlink{structpoint}{point}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Given three colinear points p, q, r, the function checks if point q lies on line segment \textquotesingle{}pr\textquotesingle{} 
+
+Definition at line 70 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71         \{ }
+\DoxyCodeLine{72             \textcolor{keywordflow}{if} (\mbox{\hyperlink{structq}{q}}.x <= max(p.x, r.x) \&\& \mbox{\hyperlink{structq}{q}}.x >= min(p.x, r.x) \&\& }
+\DoxyCodeLine{73                 \mbox{\hyperlink{structq}{q}}.y <= max(p.y, r.y) \&\& \mbox{\hyperlink{structq}{q}}.y >= min(p.y, r.y)) }
+\DoxyCodeLine{74             \textcolor{keywordflow}{return} \textcolor{keyword}{true}; }
+\DoxyCodeLine{75         }
+\DoxyCodeLine{76             \textcolor{keywordflow}{return} \textcolor{keyword}{false}; }
+\DoxyCodeLine{77         \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}\label{classFindIntersections_ac739983575f9f0463bdafadd35db9cbe}} 
+\index{FindIntersections@{FindIntersections}!orientation@{orientation}}
+\index{orientation@{orientation}!FindIntersections@{FindIntersections}}
+\doxysubsubsection{\texorpdfstring{orientation()}{orientation()}}
+{\footnotesize\ttfamily int Find\+Intersections\+::orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpoint}{point}}}]{p,  }\item[{\mbox{\hyperlink{structpoint}{point}}}]{q,  }\item[{\mbox{\hyperlink{structpoint}{point}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+To find orientation of ordered triplet (p, q, r). The function returns following values 0 -\/-\/$>$ p, q and r are colinear 1 -\/-\/$>$ Clockwise 2 -\/-\/$>$ Counterclockwise 
+
+Definition at line 85 of file Find\+Intersections.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86         \{ }
+\DoxyCodeLine{87             \textcolor{keywordtype}{float} val = (\mbox{\hyperlink{structq}{q}}.y -\/ p.y) * (r.x -\/ \mbox{\hyperlink{structq}{q}}.x) -\/ }
+\DoxyCodeLine{88                     (\mbox{\hyperlink{structq}{q}}.x -\/ p.x) * (r.y -\/ \mbox{\hyperlink{structq}{q}}.y); }
+\DoxyCodeLine{89         }
+\DoxyCodeLine{90             \textcolor{keywordflow}{if} (val == 0) \textcolor{keywordflow}{return} 0;  \textcolor{comment}{// colinear }}
+\DoxyCodeLine{91         }
+\DoxyCodeLine{92             \textcolor{keywordflow}{return} (val > 0)? 1: 2; \textcolor{comment}{// clock or counterclock wise }}
+\DoxyCodeLine{93         \} }
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Find\+Intersections.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\hypertarget{classstatustree}{}\doxysection{statustree Class Reference}
+\label{classstatustree}\index{statustree@{statustree}}
+
+
+{\ttfamily \#include $<$status.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstatustree_a924b8665ff44c64c82dd40499a2067b0}\label{classstatustree_a924b8665ff44c64c82dd40499a2067b0}} 
+\mbox{\hyperlink{classstatustree_a924b8665ff44c64c82dd40499a2067b0}{statustree}} ()
+\begin{DoxyCompactList}\small\item\em basic constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a5950da22ade74f6b65e1e70bfc618fd0}\label{classstatustree_a5950da22ade74f6b65e1e70bfc618fd0}} 
+int \mbox{\hyperlink{classstatustree_a5950da22ade74f6b65e1e70bfc618fd0}{height}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$N)
+\begin{DoxyCompactList}\small\item\em function to find height of a node \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a3c74b6a51474cdc95b30e02923bdcad3}\label{classstatustree_a3c74b6a51474cdc95b30e02923bdcad3}} 
+int {\bfseries max} (int a, int b)
+\item 
+\mbox{\Hypertarget{classstatustree_ae25e4d90beb3cbd1365fbcb7fee7b5c0}\label{classstatustree_ae25e4d90beb3cbd1365fbcb7fee7b5c0}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_ae25e4d90beb3cbd1365fbcb7fee7b5c0}{newstatus}} (\mbox{\hyperlink{structlineSegment}{line\+Segment}} newl)
+\begin{DoxyCompactList}\small\item\em function to create a new node \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_aae09d8a0c7fb3d1e6b1270eeba043f95}\label{classstatustree_aae09d8a0c7fb3d1e6b1270eeba043f95}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_aae09d8a0c7fb3d1e6b1270eeba043f95}{right\+Rotate}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$y)
+\begin{DoxyCompactList}\small\item\em function to righrotate about a point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a862e48472221cd4a8315ca17b3e74f87}\label{classstatustree_a862e48472221cd4a8315ca17b3e74f87}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_a862e48472221cd4a8315ca17b3e74f87}{left\+Rotate}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em function to left rottate about a point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}\label{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}} 
+double \mbox{\hyperlink{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}{findx}} (\mbox{\hyperlink{structlineSegment}{line\+Segment}} l, double y)
+\begin{DoxyCompactList}\small\item\em function to find x co-\/ordinate of a line given the two end points and y co-\/ordinate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_acecac49a509e79261b1fc90820fb9e8d}\label{classstatustree_acecac49a509e79261b1fc90820fb9e8d}} 
+int \mbox{\hyperlink{classstatustree_acecac49a509e79261b1fc90820fb9e8d}{get\+Balance}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$N)
+\begin{DoxyCompactList}\small\item\em function to get balance factor which is the max difference between the leaf nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a595d2f821c1f91dcade354fe5eb4671d}\label{classstatustree_a595d2f821c1f91dcade354fe5eb4671d}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_a595d2f821c1f91dcade354fe5eb4671d}{insert}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$node, \mbox{\hyperlink{structlineSegment}{line\+Segment}} newl, double ycor)
+\begin{DoxyCompactList}\small\item\em function to insert a new line \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_aafa51a76e9c8037b9a1d9b9cae02977b}\label{classstatustree_aafa51a76e9c8037b9a1d9b9cae02977b}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_aafa51a76e9c8037b9a1d9b9cae02977b}{min\+Value\+Node}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em function to find the node with the min value for bst deletion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_adeef31c7e731526b38a7527faad040e0}\label{classstatustree_adeef31c7e731526b38a7527faad040e0}} 
+struct \mbox{\hyperlink{structstatus}{status}} $\ast$ \mbox{\hyperlink{classstatustree_adeef31c7e731526b38a7527faad040e0}{delete\+Node}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$root, \mbox{\hyperlink{structlineSegment}{line\+Segment}} newl, double ycor)
+\begin{DoxyCompactList}\small\item\em function to delete a line \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a95095cbe22173fc11b8087a9dfb523a7}\label{classstatustree_a95095cbe22173fc11b8087a9dfb523a7}} 
+void \mbox{\hyperlink{classstatustree_a95095cbe22173fc11b8087a9dfb523a7}{pre\+Order}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em function to print preorder fof current tree \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a1f364cc3069760e58d60a937b1371728}\label{classstatustree_a1f364cc3069760e58d60a937b1371728}} 
+void \mbox{\hyperlink{classstatustree_a1f364cc3069760e58d60a937b1371728}{get\+Left\+Neighbor}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$node, \mbox{\hyperlink{structlineSegment}{line\+Segment}} l, double ycor, struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$last\+Right)
+\begin{DoxyCompactList}\small\item\em Get the left neighbor of a particular line segment from the status tree for S\+T\+EP 12. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstatustree_a1ceb01ca412ba02245fbc95935228e0d}\label{classstatustree_a1ceb01ca412ba02245fbc95935228e0d}} 
+void \mbox{\hyperlink{classstatustree_a1ceb01ca412ba02245fbc95935228e0d}{get\+Right\+Neighbor}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$node, \mbox{\hyperlink{structlineSegment}{line\+Segment}} l, double ycor, struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$last\+Left)
+\begin{DoxyCompactList}\small\item\em Get the left neighbor of a particular line segment from the status tree for S\+T\+EP 15. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstatustree_a7679eedc58b236e319f333aa2c34763d}{get\+Neighbors}} (struct \mbox{\hyperlink{structstatus}{status}} $\ast$node, double xcor, double ycor, struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$last\+Right, struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$last\+Left)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstatustree_a52bfc6094b0dbc7e78488ac8be9d5239}\label{classstatustree_a52bfc6094b0dbc7e78488ac8be9d5239}} 
+int \mbox{\hyperlink{classstatustree_a52bfc6094b0dbc7e78488ac8be9d5239}{globalinsert}}
+\begin{DoxyCompactList}\small\item\em globalinsert variable to signify inserting two nodes for each line \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class statustree has the functions to insert and delete a line in the status tree and to find neighbours of either a point or a line 
+
+Definition at line 33 of file status.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstatustree_a7679eedc58b236e319f333aa2c34763d}\label{classstatustree_a7679eedc58b236e319f333aa2c34763d}} 
+\index{statustree@{statustree}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!statustree@{statustree}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily void statustree\+::get\+Neighbors (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstatus}{status}} $\ast$}]{node,  }\item[{double}]{xcor,  }\item[{double}]{ycor,  }\item[{struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$}]{last\+Right,  }\item[{struct \mbox{\hyperlink{structlineSegment}{line\+Segment}} $\ast$}]{last\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get left and right neighboring segments of a point, S\+T\+EP 9 last\+Left is the right neighbor and last\+Right is the left neighbor for the point 
+
+Definition at line 312 of file status.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{312                                                                                                                                    \{}
+\DoxyCodeLine{313         \textcolor{keywordflow}{if}(node-\/>height == 1)\{}
+\DoxyCodeLine{314           \textcolor{keywordflow}{if}(lastRight-\/>startX == -\/1)\{}
+\DoxyCodeLine{315             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}{findx}}(node-\/>l,ycor-\/0.1) <= xcor)\{}
+\DoxyCodeLine{316               *lastRight = node-\/>l;}
+\DoxyCodeLine{317             \}}
+\DoxyCodeLine{318           \}}
+\DoxyCodeLine{319           \textcolor{keywordflow}{if} (lastLeft-\/>startX == -\/1) \{}
+\DoxyCodeLine{320             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}{findx}}(node-\/>l,ycor-\/0.1) > xcor)\{}
+\DoxyCodeLine{321               *lastLeft = node-\/>l;}
+\DoxyCodeLine{322             \}}
+\DoxyCodeLine{323           \}}
+\DoxyCodeLine{324           \textcolor{keywordflow}{return};}
+\DoxyCodeLine{325         \}}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327         \textcolor{keywordflow}{if} (xcor < \mbox{\hyperlink{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}{findx}}(node-\/>l,ycor-\/0.1))}
+\DoxyCodeLine{328         \{}
+\DoxyCodeLine{329           \textcolor{comment}{// printf("go left");}}
+\DoxyCodeLine{330           *lastLeft = node-\/>l;}
+\DoxyCodeLine{331           \mbox{\hyperlink{classstatustree_a7679eedc58b236e319f333aa2c34763d}{getNeighbors}}(node-\/>left, xcor, ycor, lastRight, lastLeft);}
+\DoxyCodeLine{332         \}}
+\DoxyCodeLine{333         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (xcor > \mbox{\hyperlink{classstatustree_a01d27a47004c5a082f0fa9cca6a4debf}{findx}}(node-\/>l, ycor-\/0.1))}
+\DoxyCodeLine{334         \{}
+\DoxyCodeLine{335           \textcolor{comment}{// printf("go right");}}
+\DoxyCodeLine{336           *lastRight = node-\/>l;}
+\DoxyCodeLine{337           \textcolor{keywordflow}{if} (node-\/>right == NULL) \{}
+\DoxyCodeLine{338             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{339           \}}
+\DoxyCodeLine{340           }
+\DoxyCodeLine{341           \mbox{\hyperlink{classstatustree_a7679eedc58b236e319f333aa2c34763d}{getNeighbors}}(node-\/>right, xcor, ycor, lastRight, lastLeft);}
+\DoxyCodeLine{342         \}}
+\DoxyCodeLine{343       \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+status.\+h\end{DoxyCompactItemize}
